@@ -2,17 +2,28 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Primeiro Site</title>
-    <style>
-
-    </style>
+    <title>Criar Usuário</title>
 </head>
 <body>
-    <h1>Começo da tela de login</h1>
-<!--Linha no site--><hr>
-<form action="{% url 'teste' %}" method="get">
-    <button type="submit">Ir para tela de teste</button>
-</form>
+    <h2>Criar Novo Usuário</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" required><br>
+
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" required><br>
+
+        <label for="idade">Idade:</label>
+        <input type="number" name="idade"><br>
+
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" required><br>
+
+        <label for="permissao">Permissão (1-5):</label>
+        <input type="number" name="permissao" min="1" max="5" required><br>
+
+        <button type="submit">Criar Usuário</button>
+    </form>
 </body>
 </html>
