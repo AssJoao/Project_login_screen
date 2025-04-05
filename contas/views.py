@@ -27,4 +27,4 @@ def criar_usuario(request):
     return render(request, "criar_usuario.html")
 
 def home(request):
-    return render(request, 'login_screen/login_screen.html')  # Ajuste para seu template real
+    return render(request, 'login_screen/index.html')  # Ajuste para seu template real
