@@ -25,3 +25,6 @@ def criar_usuario(request):
         return JsonResponse({"mensagem": "Usuário criado com sucesso!"}, status=201)
 
     return render(request, "criar_usuario.html")
+
+def home(request):
+    return render(request, 'login_screen/login_screen.html')  # Ajuste para seu template real
